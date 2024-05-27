@@ -36,6 +36,8 @@
             labelCourseID = new Label();
             labelCourseName = new Label();
             labelCredits = new Label();
+            btnUpdateCourse = new Button();
+            btnDeleteCourse = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCourses).BeginInit();
             SuspendLayout();
             // 
@@ -75,9 +77,9 @@
             btnAddCourse.BackColor = SystemColors.ActiveCaption;
             btnAddCourse.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddCourse.ForeColor = SystemColors.Highlight;
-            btnAddCourse.Location = new Point(560, 52);
+            btnAddCourse.Location = new Point(535, 52);
             btnAddCourse.Name = "btnAddCourse";
-            btnAddCourse.Size = new Size(240, 56);
+            btnAddCourse.Size = new Size(290, 56);
             btnAddCourse.TabIndex = 4;
             btnAddCourse.Text = "AddCourse";
             btnAddCourse.UseVisualStyleBackColor = false;
@@ -116,6 +118,32 @@
             labelCredits.TabIndex = 7;
             labelCredits.Text = "Credits:";
             // 
+            // btnUpdateCourse
+            // 
+            btnUpdateCourse.BackColor = SystemColors.ActiveCaption;
+            btnUpdateCourse.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdateCourse.ForeColor = SystemColors.Highlight;
+            btnUpdateCourse.Location = new Point(535, 124);
+            btnUpdateCourse.Name = "btnUpdateCourse";
+            btnUpdateCourse.Size = new Size(290, 56);
+            btnUpdateCourse.TabIndex = 8;
+            btnUpdateCourse.Text = "UpdateCourse";
+            btnUpdateCourse.UseVisualStyleBackColor = false;
+            btnUpdateCourse.Click += btnUpdateCourse_Click;
+            // 
+            // btnDeleteCourse
+            // 
+            btnDeleteCourse.BackColor = SystemColors.ActiveCaption;
+            btnDeleteCourse.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDeleteCourse.ForeColor = SystemColors.Highlight;
+            btnDeleteCourse.Location = new Point(535, 198);
+            btnDeleteCourse.Name = "btnDeleteCourse";
+            btnDeleteCourse.Size = new Size(290, 56);
+            btnDeleteCourse.TabIndex = 9;
+            btnDeleteCourse.Text = "DeleteCourse";
+            btnDeleteCourse.UseVisualStyleBackColor = false;
+            btnDeleteCourse.Click += btnDeleteCourse_Click;
+            // 
             // CourseForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -123,6 +151,8 @@
             BackgroundImage = Properties.Resources.sms;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(850, 578);
+            Controls.Add(btnDeleteCourse);
+            Controls.Add(btnUpdateCourse);
             Controls.Add(labelCredits);
             Controls.Add(labelCourseName);
             Controls.Add(labelCourseID);
@@ -149,5 +179,7 @@
         private Label labelCourseID;
         private Label labelCourseName;
         private Label labelCredits;
+        private Button btnUpdateCourse;
+        private Button btnDeleteCourse;
     }
 }

@@ -145,7 +145,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.sms;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(837, 627);
+            ClientSize = new Size(843, 627);
             Controls.Add(labelEnrollmentDate);
             Controls.Add(labelCourse);
             Controls.Add(labelStudent);

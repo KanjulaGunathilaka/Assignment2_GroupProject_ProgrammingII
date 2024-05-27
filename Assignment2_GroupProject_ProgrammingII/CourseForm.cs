@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
 
 namespace Assignment2_GroupProject_ProgrammingII
 {
@@ -19,6 +11,7 @@ namespace Assignment2_GroupProject_ProgrammingII
         {
             InitializeComponent();
             LoadCourses();
+            dataGridViewCourses.CellClick += dataGridViewCourses_CellClick;
         }
 
         private void LoadCourses()
@@ -40,24 +33,84 @@ namespace Assignment2_GroupProject_ProgrammingII
             dataGridViewCourses.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void btnAddCourse_Click(object sender, EventArgs e)
-        {
-            var course = new Course
-            {
-                ID = int.Parse(txtCourseID.Text),
-                CourseName = txtCourseName.Text,
-                Credits = int.Parse(txtCredits.Text)
-            };
-            courses.Add(course);
-            SaveCourses();
-            LoadCourses();
-        }
-
         private void SaveCourses()
         {
             File.WriteAllLines(filePath, courses.Select(c => c.ToCsv()));
         }
+
+        private void btnAddCourse_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var course = new Course
+                {
+                    ID = int.Parse(txtCourseID.Text),
+                    CourseName = txtCourseName.Text,
+                    Credits = int.Parse(txtCredits.Text)
+                };
+                courses.Add(course);
+                SaveCourses();
+                LoadCourses();
+                MessageBox.Show("Course added successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error occurred while adding the course: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridViewCourses_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridViewCourses.Rows.Count)
+            {
+                DataGridViewRow row = dataGridViewCourses.Rows[e.RowIndex];
+
+                if (!row.IsNewRow)
+                {
+                    txtCourseID.Text = row.Cells["ID"].Value.ToString();
+                    txtCourseName.Text = row.Cells["CourseName"].Value.ToString();
+                    txtCredits.Text = row.Cells["Credits"].Value.ToString();
+                }
+            }
+        }
+
+        private void btnUpdateCourse_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int selectedIndex = dataGridViewCourses.CurrentCell.RowIndex;
+                var selectedCourse = courses[selectedIndex];
+
+                selectedCourse.CourseName = txtCourseName.Text;
+                selectedCourse.Credits = int.Parse(txtCredits.Text);
+
+                SaveCourses();
+                LoadCourses();
+                MessageBox.Show("Course updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error occurred while updating the course: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDeleteCourse_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int selectedIndex = dataGridViewCourses.CurrentCell.RowIndex;
+                var selectedCourse = courses[selectedIndex];
+
+                courses.Remove(selectedCourse);
+
+                SaveCourses();
+                LoadCourses();
+                MessageBox.Show("Course deleted successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error occurred while deleting the course: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
-
 }
-

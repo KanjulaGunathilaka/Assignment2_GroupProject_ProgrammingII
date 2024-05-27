@@ -38,13 +38,15 @@
             labelFirstName = new Label();
             labelLastName = new Label();
             labelSubject = new Label();
+            btnUpdateTeacher = new Button();
+            btnDeleteTeacher = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTeachers).BeginInit();
             SuspendLayout();
             // 
             // dataGridViewTeachers
             // 
             dataGridViewTeachers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewTeachers.Location = new Point(34, 277);
+            dataGridViewTeachers.Location = new Point(34, 283);
             dataGridViewTeachers.Name = "dataGridViewTeachers";
             dataGridViewTeachers.RowHeadersWidth = 62;
             dataGridViewTeachers.Size = new Size(864, 344);
@@ -85,7 +87,7 @@
             btnAddTeacher.ForeColor = SystemColors.Highlight;
             btnAddTeacher.Location = new Point(542, 43);
             btnAddTeacher.Name = "btnAddTeacher";
-            btnAddTeacher.Size = new Size(205, 63);
+            btnAddTeacher.Size = new Size(276, 63);
             btnAddTeacher.TabIndex = 5;
             btnAddTeacher.Text = "Add Teacher";
             btnAddTeacher.UseVisualStyleBackColor = false;
@@ -135,6 +137,32 @@
             labelSubject.TabIndex = 9;
             labelSubject.Text = "Subject:";
             // 
+            // btnUpdateTeacher
+            // 
+            btnUpdateTeacher.BackColor = SystemColors.ActiveCaption;
+            btnUpdateTeacher.Font = new Font("Arial Narrow", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdateTeacher.ForeColor = SystemColors.Highlight;
+            btnUpdateTeacher.Location = new Point(542, 125);
+            btnUpdateTeacher.Name = "btnUpdateTeacher";
+            btnUpdateTeacher.Size = new Size(276, 63);
+            btnUpdateTeacher.TabIndex = 10;
+            btnUpdateTeacher.Text = "Update Teacher";
+            btnUpdateTeacher.UseVisualStyleBackColor = false;
+            btnUpdateTeacher.Click += btnUpdateTeacher_Click;
+            // 
+            // btnDeleteTeacher
+            // 
+            btnDeleteTeacher.BackColor = SystemColors.ActiveCaption;
+            btnDeleteTeacher.Font = new Font("Arial Narrow", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDeleteTeacher.ForeColor = SystemColors.Highlight;
+            btnDeleteTeacher.Location = new Point(542, 208);
+            btnDeleteTeacher.Name = "btnDeleteTeacher";
+            btnDeleteTeacher.Size = new Size(276, 63);
+            btnDeleteTeacher.TabIndex = 11;
+            btnDeleteTeacher.Text = "Delete Teacher";
+            btnDeleteTeacher.UseVisualStyleBackColor = false;
+            btnDeleteTeacher.Click += btnDeleteTeacher_Click;
+            // 
             // TeacherForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -142,6 +170,8 @@
             BackgroundImage = Properties.Resources.sms;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(927, 636);
+            Controls.Add(btnDeleteTeacher);
+            Controls.Add(btnUpdateTeacher);
             Controls.Add(labelSubject);
             Controls.Add(labelLastName);
             Controls.Add(labelFirstName);
@@ -172,5 +202,7 @@
         private Label labelFirstName;
         private Label labelLastName;
         private Label labelSubject;
+        private Button btnUpdateTeacher;
+        private Button btnDeleteTeacher;
     }
 }

@@ -100,10 +100,8 @@ namespace Assignment2_GroupProject_ProgrammingII
                 int selectedIndex = dataGridViewStudents.CurrentCell.RowIndex;
                 var selectedStudent = students[selectedIndex];
 
-                // Remove the selected student from the list
                 students.Remove(selectedStudent);
 
-                // Save changes to the file
                 SaveStudents();
                 LoadStudents();
                 Console.WriteLine("Student deleted successfully.");
@@ -121,7 +119,6 @@ namespace Assignment2_GroupProject_ProgrammingII
                 int selectedIndex = dataGridViewStudents.CurrentCell.RowIndex;
                 var selectedStudent = students[selectedIndex];
 
-                // Update the selected student with the new values
                 selectedStudent.FirstName = txtFirstName.Text;
                 selectedStudent.LastName = txtLastName.Text;
                 selectedStudent.DateOfBirth = dateTimePickerDOB.Value;
@@ -132,7 +129,6 @@ namespace Assignment2_GroupProject_ProgrammingII
                     throw new ArgumentException("Gender must be either 'Male', 'Female' or 'Other'.");
                 }
 
-                // Save changes to the file
                 SaveStudents();
                 LoadStudents();
                 Console.WriteLine("Student updated successfully.");
