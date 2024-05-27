@@ -44,56 +44,59 @@
             // dataGridViewTeachers
             // 
             dataGridViewTeachers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewTeachers.Location = new Point(279, 25);
+            dataGridViewTeachers.Location = new Point(34, 277);
             dataGridViewTeachers.Name = "dataGridViewTeachers";
             dataGridViewTeachers.RowHeadersWidth = 62;
-            dataGridViewTeachers.Size = new Size(360, 225);
+            dataGridViewTeachers.Size = new Size(864, 344);
             dataGridViewTeachers.TabIndex = 0;
             // 
             // txtTeacherID
             // 
-            txtTeacherID.Location = new Point(336, 299);
+            txtTeacherID.Location = new Point(223, 44);
             txtTeacherID.Name = "txtTeacherID";
-            txtTeacherID.Size = new Size(150, 31);
+            txtTeacherID.Size = new Size(248, 31);
             txtTeacherID.TabIndex = 1;
             // 
             // txtFirstName
             // 
-            txtFirstName.Location = new Point(336, 348);
+            txtFirstName.Location = new Point(223, 93);
             txtFirstName.Name = "txtFirstName";
-            txtFirstName.Size = new Size(150, 31);
+            txtFirstName.Size = new Size(248, 31);
             txtFirstName.TabIndex = 2;
             // 
             // txtLastName
             // 
-            txtLastName.Location = new Point(336, 399);
+            txtLastName.Location = new Point(223, 144);
             txtLastName.Name = "txtLastName";
-            txtLastName.Size = new Size(150, 31);
+            txtLastName.Size = new Size(248, 31);
             txtLastName.TabIndex = 3;
             // 
             // txtSubject
             // 
-            txtSubject.Location = new Point(336, 454);
+            txtSubject.Location = new Point(223, 199);
             txtSubject.Name = "txtSubject";
-            txtSubject.Size = new Size(150, 31);
+            txtSubject.Size = new Size(248, 31);
             txtSubject.TabIndex = 4;
             // 
             // btnAddTeacher
             // 
+            btnAddTeacher.BackColor = SystemColors.ActiveCaption;
             btnAddTeacher.Font = new Font("Arial Narrow", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddTeacher.ForeColor = SystemColors.Highlight;
-            btnAddTeacher.Location = new Point(745, 320);
+            btnAddTeacher.Location = new Point(542, 43);
             btnAddTeacher.Name = "btnAddTeacher";
-            btnAddTeacher.Size = new Size(205, 95);
+            btnAddTeacher.Size = new Size(205, 63);
             btnAddTeacher.TabIndex = 5;
             btnAddTeacher.Text = "Add Teacher";
-            btnAddTeacher.UseVisualStyleBackColor = true;
+            btnAddTeacher.UseVisualStyleBackColor = false;
+            btnAddTeacher.Click += btnAddTeacher_Click;
             // 
             // labelTeacherID
             // 
             labelTeacherID.AutoSize = true;
+            labelTeacherID.BackColor = Color.Transparent;
             labelTeacherID.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelTeacherID.Location = new Point(168, 299);
+            labelTeacherID.Location = new Point(37, 43);
             labelTeacherID.Name = "labelTeacherID";
             labelTeacherID.Size = new Size(141, 32);
             labelTeacherID.TabIndex = 6;
@@ -102,8 +105,9 @@
             // labelFirstName
             // 
             labelFirstName.AutoSize = true;
+            labelFirstName.BackColor = Color.Transparent;
             labelFirstName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelFirstName.Location = new Point(165, 348);
+            labelFirstName.Location = new Point(34, 93);
             labelFirstName.Name = "labelFirstName";
             labelFirstName.Size = new Size(144, 32);
             labelFirstName.TabIndex = 7;
@@ -112,8 +116,9 @@
             // labelLastName
             // 
             labelLastName.AutoSize = true;
+            labelLastName.BackColor = Color.Transparent;
             labelLastName.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelLastName.Location = new Point(169, 401);
+            labelLastName.Location = new Point(37, 146);
             labelLastName.Name = "labelLastName";
             labelLastName.Size = new Size(140, 29);
             labelLastName.TabIndex = 8;
@@ -122,8 +127,9 @@
             // labelSubject
             // 
             labelSubject.AutoSize = true;
+            labelSubject.BackColor = Color.Transparent;
             labelSubject.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelSubject.Location = new Point(202, 456);
+            labelSubject.Location = new Point(37, 201);
             labelSubject.Name = "labelSubject";
             labelSubject.Size = new Size(107, 29);
             labelSubject.TabIndex = 9;
@@ -133,7 +139,9 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1144, 567);
+            BackgroundImage = Properties.Resources.sms;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(927, 636);
             Controls.Add(labelSubject);
             Controls.Add(labelLastName);
             Controls.Add(labelFirstName);
@@ -144,6 +152,7 @@
             Controls.Add(txtFirstName);
             Controls.Add(txtTeacherID);
             Controls.Add(dataGridViewTeachers);
+            DoubleBuffered = true;
             Name = "TeacherForm";
             Text = "TeacherForm";
             ((System.ComponentModel.ISupportInitialize)dataGridViewTeachers).EndInit();

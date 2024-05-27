@@ -13,7 +13,7 @@ namespace Assignment2_GroupProject_ProgrammingII
     public partial class CourseForm : Form
     {
         private List<Course> courses;
-        private string filePath = @"../../datafiles/courses.csv";
+        private string filePath = @"../../../datafiles/courses.csv";
 
         public CourseForm()
         {
@@ -26,14 +26,18 @@ namespace Assignment2_GroupProject_ProgrammingII
             if (File.Exists(filePath))
             {
                 courses = File.ReadAllLines(filePath)
-                              .Select(line => Course.FromCsv(line))
-                              .ToList();
+                  .Select(line => Course.FromCsv(line))
+                  .ToList();
             }
             else
             {
                 courses = new List<Course>();
             }
             dataGridViewCourses.DataSource = courses;
+            dataGridViewCourses.Columns["ID"].DisplayIndex = 0;
+            dataGridViewCourses.Columns["CourseName"].DisplayIndex = 1;
+            dataGridViewCourses.Columns["Credits"].DisplayIndex = 2;
+            dataGridViewCourses.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void btnAddCourse_Click(object sender, EventArgs e)

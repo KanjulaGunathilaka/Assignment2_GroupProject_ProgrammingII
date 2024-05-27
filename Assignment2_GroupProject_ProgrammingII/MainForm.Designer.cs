@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             btnStudents = new Button();
             btnCourses = new Button();
             btnEnrollments = new Button();
@@ -40,98 +41,108 @@
             // 
             // btnStudents
             // 
+            btnStudents.BackColor = SystemColors.ActiveCaption;
             btnStudents.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStudents.ForeColor = SystemColors.Highlight;
-            btnStudents.Location = new Point(513, 114);
+            btnStudents.Location = new Point(693, 86);
             btnStudents.Name = "btnStudents";
-            btnStudents.Size = new Size(222, 88);
+            btnStudents.Size = new Size(355, 125);
             btnStudents.TabIndex = 0;
             btnStudents.Text = "Students";
-            btnStudents.UseVisualStyleBackColor = true;
+            btnStudents.UseVisualStyleBackColor = false;
             btnStudents.Click += btnStudents_Click;
             // 
             // btnCourses
             // 
+            btnCourses.BackColor = SystemColors.ActiveCaption;
             btnCourses.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCourses.Location = new Point(513, 223);
+            btnCourses.Location = new Point(693, 217);
             btnCourses.Name = "btnCourses";
-            btnCourses.Size = new Size(222, 78);
+            btnCourses.Size = new Size(355, 115);
             btnCourses.TabIndex = 1;
             btnCourses.Text = "Courses";
-            btnCourses.UseVisualStyleBackColor = true;
+            btnCourses.UseVisualStyleBackColor = false;
             btnCourses.Click += btnCourses_Click;
             // 
             // btnEnrollments
             // 
+            btnEnrollments.BackColor = SystemColors.ActiveCaption;
             btnEnrollments.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEnrollments.Location = new Point(513, 334);
+            btnEnrollments.Location = new Point(693, 338);
             btnEnrollments.Name = "btnEnrollments";
-            btnEnrollments.Size = new Size(222, 77);
+            btnEnrollments.Size = new Size(355, 114);
             btnEnrollments.TabIndex = 2;
             btnEnrollments.Text = "Enrollments";
-            btnEnrollments.UseVisualStyleBackColor = true;
+            btnEnrollments.UseVisualStyleBackColor = false;
             btnEnrollments.Click += btnEnrollments_Click;
             // 
             // btnTeachers
             // 
+            btnTeachers.BackColor = SystemColors.ActiveCaption;
             btnTeachers.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnTeachers.Location = new Point(513, 437);
+            btnTeachers.Location = new Point(693, 458);
             btnTeachers.Name = "btnTeachers";
-            btnTeachers.Size = new Size(222, 83);
+            btnTeachers.Size = new Size(355, 120);
             btnTeachers.TabIndex = 3;
             btnTeachers.Text = "Teachers";
-            btnTeachers.UseVisualStyleBackColor = true;
+            btnTeachers.UseVisualStyleBackColor = false;
             btnTeachers.Click += btnTeachers_Click;
             // 
             // labelStudentFormButton
             // 
             labelStudentFormButton.AutoSize = true;
-            labelStudentFormButton.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelStudentFormButton.ForeColor = SystemColors.MenuText;
-            labelStudentFormButton.Location = new Point(168, 148);
+            labelStudentFormButton.BackColor = Color.Transparent;
+            labelStudentFormButton.Font = new Font("Arial", 20F, FontStyle.Bold);
+            labelStudentFormButton.ForeColor = SystemColors.Highlight;
+            labelStudentFormButton.Location = new Point(101, 124);
             labelStudentFormButton.Name = "labelStudentFormButton";
-            labelStudentFormButton.Size = new Size(213, 29);
+            labelStudentFormButton.Size = new Size(421, 46);
             labelStudentFormButton.TabIndex = 4;
-            labelStudentFormButton.Text = "Manage Students";
+            labelStudentFormButton.Text = "MANAGE STUDENTS";
             // 
             // labelCourseFormButton
             // 
             labelCourseFormButton.AutoSize = true;
-            labelCourseFormButton.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelCourseFormButton.ForeColor = SystemColors.MenuText;
-            labelCourseFormButton.Location = new Point(168, 252);
+            labelCourseFormButton.BackColor = Color.Transparent;
+            labelCourseFormButton.Font = new Font("Arial", 20F, FontStyle.Bold);
+            labelCourseFormButton.ForeColor = SystemColors.HotTrack;
+            labelCourseFormButton.Location = new Point(101, 250);
             labelCourseFormButton.Name = "labelCourseFormButton";
-            labelCourseFormButton.Size = new Size(205, 29);
+            labelCourseFormButton.Size = new Size(404, 46);
             labelCourseFormButton.TabIndex = 5;
-            labelCourseFormButton.Text = "Manage Courses";
+            labelCourseFormButton.Text = "MANAGE COURSES";
             // 
             // labelEnrollmentFormButton
             // 
             labelEnrollmentFormButton.AutoSize = true;
-            labelEnrollmentFormButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelEnrollmentFormButton.ForeColor = SystemColors.WindowText;
-            labelEnrollmentFormButton.Location = new Point(168, 359);
+            labelEnrollmentFormButton.BackColor = Color.Transparent;
+            labelEnrollmentFormButton.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            labelEnrollmentFormButton.ForeColor = SystemColors.HotTrack;
+            labelEnrollmentFormButton.Location = new Point(101, 365);
             labelEnrollmentFormButton.Name = "labelEnrollmentFormButton";
-            labelEnrollmentFormButton.Size = new Size(250, 32);
+            labelEnrollmentFormButton.Size = new Size(494, 54);
             labelEnrollmentFormButton.TabIndex = 6;
-            labelEnrollmentFormButton.Text = "Manage Enrollments";
+            labelEnrollmentFormButton.Text = "MANAGE ENROLLMENTS";
             // 
             // labelTeacherFormButton
             // 
             labelTeacherFormButton.AutoSize = true;
-            labelTeacherFormButton.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelTeacherFormButton.ForeColor = SystemColors.MenuText;
-            labelTeacherFormButton.Location = new Point(169, 468);
+            labelTeacherFormButton.BackColor = Color.Transparent;
+            labelTeacherFormButton.Font = new Font("Arial", 20F, FontStyle.Bold);
+            labelTeacherFormButton.ForeColor = SystemColors.HotTrack;
+            labelTeacherFormButton.Location = new Point(101, 494);
             labelTeacherFormButton.Name = "labelTeacherFormButton";
-            labelTeacherFormButton.Size = new Size(212, 29);
+            labelTeacherFormButton.Size = new Size(424, 46);
             labelTeacherFormButton.TabIndex = 7;
-            labelTeacherFormButton.Text = "Manage Teachers";
+            labelTeacherFormButton.Text = "MANAGE TEACHERS";
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1207, 673);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1115, 671);
             Controls.Add(labelTeacherFormButton);
             Controls.Add(labelEnrollmentFormButton);
             Controls.Add(labelCourseFormButton);
@@ -140,9 +151,10 @@
             Controls.Add(btnEnrollments);
             Controls.Add(btnCourses);
             Controls.Add(btnStudents);
+            DoubleBuffered = true;
             ForeColor = SystemColors.MenuHighlight;
             Name = "MainForm";
-            Text = "MainForm";
+            Text = "StudentManagementSystem";
             ResumeLayout(false);
             PerformLayout();
         }

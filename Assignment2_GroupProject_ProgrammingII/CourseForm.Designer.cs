@@ -41,51 +41,54 @@
             // 
             // dataGridViewCourses
             // 
+            dataGridViewCourses.AccessibleRole = AccessibleRole.None;
             dataGridViewCourses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCourses.Location = new Point(575, 91);
+            dataGridViewCourses.Location = new Point(42, 274);
             dataGridViewCourses.Name = "dataGridViewCourses";
             dataGridViewCourses.RowHeadersWidth = 62;
-            dataGridViewCourses.Size = new Size(360, 225);
+            dataGridViewCourses.Size = new Size(758, 289);
             dataGridViewCourses.TabIndex = 0;
             // 
             // txtCourseID
             // 
-            txtCourseID.Location = new Point(278, 122);
+            txtCourseID.Location = new Point(219, 52);
             txtCourseID.Name = "txtCourseID";
-            txtCourseID.Size = new Size(150, 31);
+            txtCourseID.Size = new Size(240, 31);
             txtCourseID.TabIndex = 1;
             // 
             // txtCourseName
             // 
-            txtCourseName.Location = new Point(278, 194);
+            txtCourseName.Location = new Point(219, 124);
             txtCourseName.Name = "txtCourseName";
-            txtCourseName.Size = new Size(150, 31);
+            txtCourseName.Size = new Size(240, 31);
             txtCourseName.TabIndex = 2;
             // 
             // txtCredits
             // 
-            txtCredits.Location = new Point(278, 271);
+            txtCredits.Location = new Point(219, 201);
             txtCredits.Name = "txtCredits";
-            txtCredits.Size = new Size(150, 31);
+            txtCredits.Size = new Size(240, 31);
             txtCredits.TabIndex = 3;
             // 
             // btnAddCourse
             // 
+            btnAddCourse.BackColor = SystemColors.ActiveCaption;
             btnAddCourse.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddCourse.ForeColor = SystemColors.Highlight;
-            btnAddCourse.Location = new Point(218, 394);
+            btnAddCourse.Location = new Point(560, 52);
             btnAddCourse.Name = "btnAddCourse";
-            btnAddCourse.Size = new Size(240, 76);
+            btnAddCourse.Size = new Size(240, 56);
             btnAddCourse.TabIndex = 4;
             btnAddCourse.Text = "AddCourse";
-            btnAddCourse.UseVisualStyleBackColor = true;
+            btnAddCourse.UseVisualStyleBackColor = false;
             btnAddCourse.Click += btnAddCourse_Click;
             // 
             // labelCourseID
             // 
             labelCourseID.AutoSize = true;
+            labelCourseID.BackColor = Color.Transparent;
             labelCourseID.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelCourseID.Location = new Point(116, 124);
+            labelCourseID.Location = new Point(42, 54);
             labelCourseID.Name = "labelCourseID";
             labelCourseID.Size = new Size(133, 29);
             labelCourseID.TabIndex = 5;
@@ -94,8 +97,9 @@
             // labelCourseName
             // 
             labelCourseName.AutoSize = true;
+            labelCourseName.BackColor = Color.Transparent;
             labelCourseName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelCourseName.Location = new Point(75, 191);
+            labelCourseName.Location = new Point(42, 121);
             labelCourseName.Name = "labelCourseName";
             labelCourseName.Size = new Size(174, 32);
             labelCourseName.TabIndex = 6;
@@ -104,8 +108,9 @@
             // labelCredits
             // 
             labelCredits.AutoSize = true;
+            labelCredits.BackColor = Color.Transparent;
             labelCredits.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelCredits.Location = new Point(148, 268);
+            labelCredits.Location = new Point(42, 198);
             labelCredits.Name = "labelCredits";
             labelCredits.Size = new Size(101, 32);
             labelCredits.TabIndex = 7;
@@ -115,7 +120,9 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1219, 687);
+            BackgroundImage = Properties.Resources.sms;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(850, 578);
             Controls.Add(labelCredits);
             Controls.Add(labelCourseName);
             Controls.Add(labelCourseID);
@@ -124,6 +131,7 @@
             Controls.Add(txtCourseName);
             Controls.Add(txtCourseID);
             Controls.Add(dataGridViewCourses);
+            DoubleBuffered = true;
             Name = "CourseForm";
             Text = "CourseForm";
             ((System.ComponentModel.ISupportInitialize)dataGridViewCourses).EndInit();

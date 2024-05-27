@@ -13,7 +13,7 @@ namespace Assignment2_GroupProject_ProgrammingII
     public partial class TeacherForm : Form
     {
         private List<Teacher> teachers;
-        private string filePath = @"../../datafiles/teachers.csv";
+        private string filePath = @"../../../datafiles/teachers.csv";
 
         public TeacherForm()
         {
@@ -26,14 +26,24 @@ namespace Assignment2_GroupProject_ProgrammingII
             if (File.Exists(filePath))
             {
                 teachers = File.ReadAllLines(filePath)
-                               .Select(line => Teacher.FromCsv(line))
-                               .ToList();
+                  .Select(line => Teacher.FromCsv(line))
+                  .ToList();
             }
             else
             {
                 teachers = new List<Teacher>();
             }
             dataGridViewTeachers.DataSource = teachers;
+            dataGridViewTeachers.Columns["ID"].DisplayIndex = 0;
+            dataGridViewTeachers.Columns["FirstName"].DisplayIndex = 1;
+            dataGridViewTeachers.Columns["LastName"].DisplayIndex = 2;
+            dataGridViewTeachers.Columns["Subject"].DisplayIndex = 3;
+            dataGridViewTeachers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void SaveTeachers()
+        {
+            File.WriteAllLines(filePath, teachers.Select(t => t.ToCsv()));
         }
 
         private void btnAddTeacher_Click(object sender, EventArgs e)
@@ -48,11 +58,6 @@ namespace Assignment2_GroupProject_ProgrammingII
             teachers.Add(teacher);
             SaveTeachers();
             LoadTeachers();
-        }
-
-        private void SaveTeachers()
-        {
-            File.WriteAllLines(filePath, teachers.Select(t => t.ToCsv()));
         }
     }
 }

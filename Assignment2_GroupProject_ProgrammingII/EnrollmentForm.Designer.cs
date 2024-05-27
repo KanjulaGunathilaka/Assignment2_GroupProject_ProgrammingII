@@ -43,60 +43,64 @@
             // 
             // dataGridViewEnrollments
             // 
+            dataGridViewEnrollments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewEnrollments.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewEnrollments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewEnrollments.Location = new Point(631, 58);
+            dataGridViewEnrollments.Location = new Point(0, 299);
             dataGridViewEnrollments.Name = "dataGridViewEnrollments";
             dataGridViewEnrollments.RowHeadersWidth = 62;
-            dataGridViewEnrollments.Size = new Size(360, 225);
+            dataGridViewEnrollments.Size = new Size(837, 314);
             dataGridViewEnrollments.TabIndex = 0;
             // 
             // comboBoxStudents
             // 
             comboBoxStudents.FormattingEnabled = true;
-            comboBoxStudents.Location = new Point(252, 58);
+            comboBoxStudents.Location = new Point(223, 42);
             comboBoxStudents.Name = "comboBoxStudents";
-            comboBoxStudents.Size = new Size(182, 33);
+            comboBoxStudents.Size = new Size(289, 33);
             comboBoxStudents.TabIndex = 1;
             // 
             // comboBoxCourses
             // 
             comboBoxCourses.FormattingEnabled = true;
-            comboBoxCourses.Location = new Point(252, 127);
+            comboBoxCourses.Location = new Point(223, 99);
             comboBoxCourses.Name = "comboBoxCourses";
-            comboBoxCourses.Size = new Size(182, 33);
+            comboBoxCourses.Size = new Size(289, 33);
             comboBoxCourses.TabIndex = 2;
             // 
             // txtEnrollmentID
             // 
-            txtEnrollmentID.Location = new Point(252, 201);
+            txtEnrollmentID.Location = new Point(223, 156);
             txtEnrollmentID.Name = "txtEnrollmentID";
-            txtEnrollmentID.Size = new Size(182, 31);
+            txtEnrollmentID.Size = new Size(289, 31);
             txtEnrollmentID.TabIndex = 3;
             // 
             // dateTimePickerEnrollmentDate
             // 
-            dateTimePickerEnrollmentDate.Location = new Point(228, 295);
+            dateTimePickerEnrollmentDate.Location = new Point(223, 217);
             dateTimePickerEnrollmentDate.Name = "dateTimePickerEnrollmentDate";
-            dateTimePickerEnrollmentDate.Size = new Size(300, 31);
+            dateTimePickerEnrollmentDate.Size = new Size(289, 31);
             dateTimePickerEnrollmentDate.TabIndex = 4;
             // 
             // btnEnrollStudent
             // 
+            btnEnrollStudent.BackColor = SystemColors.ActiveCaption;
             btnEnrollStudent.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEnrollStudent.ForeColor = SystemColors.Highlight;
-            btnEnrollStudent.Location = new Point(717, 379);
+            btnEnrollStudent.Location = new Point(547, 42);
             btnEnrollStudent.Name = "btnEnrollStudent";
-            btnEnrollStudent.Size = new Size(260, 89);
+            btnEnrollStudent.Size = new Size(271, 59);
             btnEnrollStudent.TabIndex = 5;
             btnEnrollStudent.Text = "EnrollStudent";
-            btnEnrollStudent.UseVisualStyleBackColor = true;
+            btnEnrollStudent.UseVisualStyleBackColor = false;
             btnEnrollStudent.Click += btnEnrollStudent_Click;
             // 
             // labelEnrollmentID
             // 
             labelEnrollmentID.AutoSize = true;
+            labelEnrollmentID.BackColor = Color.Transparent;
             labelEnrollmentID.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelEnrollmentID.Location = new Point(12, 201);
+            labelEnrollmentID.Location = new Point(19, 158);
             labelEnrollmentID.Name = "labelEnrollmentID";
             labelEnrollmentID.Size = new Size(170, 29);
             labelEnrollmentID.TabIndex = 6;
@@ -105,8 +109,9 @@
             // labelStudent
             // 
             labelStudent.AutoSize = true;
+            labelStudent.BackColor = Color.Transparent;
             labelStudent.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelStudent.Location = new Point(28, 71);
+            labelStudent.Location = new Point(19, 42);
             labelStudent.Name = "labelStudent";
             labelStudent.Size = new Size(103, 29);
             labelStudent.TabIndex = 7;
@@ -115,8 +120,9 @@
             // labelCourse
             // 
             labelCourse.AutoSize = true;
+            labelCourse.BackColor = Color.Transparent;
             labelCourse.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelCourse.Location = new Point(34, 124);
+            labelCourse.Location = new Point(19, 99);
             labelCourse.Name = "labelCourse";
             labelCourse.Size = new Size(93, 32);
             labelCourse.TabIndex = 8;
@@ -125,10 +131,11 @@
             // labelEnrollmentDate
             // 
             labelEnrollmentDate.AutoSize = true;
-            labelEnrollmentDate.Font = new Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelEnrollmentDate.Location = new Point(18, 286);
+            labelEnrollmentDate.BackColor = Color.Transparent;
+            labelEnrollmentDate.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelEnrollmentDate.Location = new Point(19, 219);
             labelEnrollmentDate.Name = "labelEnrollmentDate";
-            labelEnrollmentDate.Size = new Size(164, 29);
+            labelEnrollmentDate.Size = new Size(197, 29);
             labelEnrollmentDate.TabIndex = 9;
             labelEnrollmentDate.Text = "Enrollment Date";
             // 
@@ -136,7 +143,9 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1197, 666);
+            BackgroundImage = Properties.Resources.sms;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(837, 627);
             Controls.Add(labelEnrollmentDate);
             Controls.Add(labelCourse);
             Controls.Add(labelStudent);
@@ -147,6 +156,7 @@
             Controls.Add(comboBoxCourses);
             Controls.Add(comboBoxStudents);
             Controls.Add(dataGridViewEnrollments);
+            DoubleBuffered = true;
             Name = "EnrollmentForm";
             Text = "EnrollmentForm";
             ((System.ComponentModel.ISupportInitialize)dataGridViewEnrollments).EndInit();
