@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Assignment2_GroupProject_ProgrammingII.User" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAwIAAAAAAAAAAAAAAAAAAAAAAEAAAAAg=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment2_GroupProject_ProgrammingII.TeacherForm">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CICiCAAAACAAABQQAACAABECAABAhEAAAAMBAAAAAAI=</HashCode>
+      <FileName>TeacherForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment2_GroupProject_ProgrammingII.Teacher">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAIAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment2_GroupProject_ProgrammingII.StudentForm">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACgAIAAATAwASAACICAAAACAEBIgEEAQAEAAAACAAA=</HashCode>
+      <FileName>StudentForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment2_GroupProject_ProgrammingII.Student">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQACAAAAAAAAAAAAQAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment2_GroupProject_ProgrammingII.Program">
+    <Position X="6.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment2_GroupProject_ProgrammingII.MainForm">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAQAAACACAAACAACAYIACAAQAJAAAAAAAQAACAAA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment2_GroupProject_ProgrammingII.EnrollmentForm">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QASBkAAAACAAAAABCBCAAwBiIAAAAAEIEigBAAIDAAI=</HashCode>
+      <FileName>EnrollmentForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment2_GroupProject_ProgrammingII.Enrollment">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAwAAAAAAAAAAAAAAAAAQAAAAAEAACAAA=</HashCode>
+      <FileName>Enrollment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment2_GroupProject_ProgrammingII.CourseForm">
+    <Position X="2.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAABGAAEAAAgACghAACCAAAgEAIGAAAAQAQAKA=</HashCode>
+      <FileName>CourseForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment2_GroupProject_ProgrammingII.Course">
+    <Position X="4.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Course.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
